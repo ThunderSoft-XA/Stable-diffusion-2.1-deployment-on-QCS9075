@@ -1,0 +1,10 @@
+--index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+diffusers==0.35.2
+numpy==2.3.5
+pillow==12.0.0
+tokenizers==0.22.1
+torch==2.9.1
+transformers==4.57.1
+accelerate
+hf_transfer  # Enable faster HF downloads via hf-transfer

@@ -8,9 +8,10 @@ There are 2 ways to get the model files.
 
 Clone https://github.com/quic/ai-hub-models on PC and export the pre-compiled model.
 
+
+```powershell
 PowerShell  
 cmd
-```powershell
 D:\py\venv\Scripts\Activate.ps1
 python -m qai_hub_models.models.stable_diffusion_v2_1.export --target-runtime precompiled_qnn_onnx  --device "QCS9075" --fetch-static-assets v0.39.1
 ```
@@ -25,9 +26,9 @@ If the version in tool-versions.yaml is qairt: 2.38.0.250901140452_125126-auto, 
 
 Version information can also be found in the model file under Linux using the strings command:
 
+```bash
 Shell  
 cmd
-```bash
 strings Stable-Diffusion-v2.1_text_encoder_w8a16.bin | grep "v2."
 ```
 
@@ -41,9 +42,9 @@ Additionally, we can also build/convert the model context files by ourselves fol
 
 Three model context files will be downloaded: text-encoder, unet and vae :
 
+```text
 Shell  
 cmd
-```text
 Stable-Diffusion-v2.1_text_encoder_w8a16.bin
 Stable-Diffusion-v2.1_unet_w8a16.bin
 Stable-Diffusion-v2.1_vae_w8a16.bin
@@ -148,9 +149,9 @@ Since only a minimal python3 is integrated in our LE (Open Embedded) system, we 
 
 Download python3.12.9 and python3.12.9-lib rpm package and extract files from them on a Linux host:
 
+```bash
 Shell  
 cmd on host
-```bash
 wget https://yum.oracle.com/repo/OracleLinux/OL9/appstream/aarch64/getPackage/python3.12-3.12.9-1.el9.aarch64.rpm
 wget https://yum.oracle.com/repo/OracleLinux/OL9/appstream/aarch64/getPackage/python3.12-libs-3.12.9-1.el9.aarch64.rpm
 #extract files
@@ -169,18 +170,19 @@ scp -r usr/lib64/* usr@device-ip:/usr/lib
 
 Link a lib64 directory on the device
 
+
+```bash
 Shell  
 cmd
-```bash
 ln -s /usr/lib /usr/lib64
 ldconfig
 ```
 
 Install pip3 on the device
 
+```bash
 Shell  
 cmd
-```bash
 wget https://bootstrap.pypa.io/get-pip.py
 python3 get-pip.py
 #check pip3
@@ -189,18 +191,18 @@ pip3 --version
 
 Create a virtual environment(venv) and activate it:
 
-Plain Text  
-cmd
 ```text
-python3 -m venv sd21-project-env
+Plain Text  
+cmdpython3 -m venv sd21-project-env
 source sd21-project-env/bin/activate
 ```
 
 Install python modules by the runner script in the venv
 
+
+```bash
 Shell  
 cmd
-```bash
 pip install diffusers==0.35.2 \
             numpy==2.3.5 \
             pillow==12.0.0 \
@@ -216,9 +218,10 @@ pip install diffusers==0.35.2 \
 
 Clone or copy this project on the device
 
+
+```bash
 Bash  
 cmd
-```bash
 #In China mainland, use a huggingface mirror site instead
 export HF_ENDPOINT=https://hf-mirror.com
 export HF_HUB_ENABLE_HF_TRANSFER=1  #Optional, may speed up the download in first execution

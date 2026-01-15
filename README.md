@@ -1,4 +1,11 @@
 # Stable diffusion 2.1 deployment on QCS9075
+Stable Diffusion is a widely adopted text-to-image generative model, enabling high-quality image synthesis from natural language prompts. Deploying Stable Diffusion efficiently on edge devices remains challenging due to its large model size, multi-stage architecture, and high computational requirements.
+
+This demo demonstrates on-device deployment and execution of Stable Diffusion 2.1 on the Qualcomm QCS9075 platform using Qualcomm AI Runtime (QNN).
+
+The Stable Diffusion pipeline is split into three pre-compiled model context files: text encoder, UNet, and VAE. These model binaries are either exported using Qualcomm AI Hub tools or downloaded from Hugging Face with version alignment to the target QNN SDK. The demo runs fully on-device and generates images from text prompts without relying on cloud inference.
+
+The project highlights the complete workflow for generative AI deployment on Qualcomm platforms, including model context preparation, QNN SDK integration, Python runtime setup, and end-to-end text-to-image inference.
 
 ## Export or download the pre-compiled model context file
 

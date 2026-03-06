@@ -17,8 +17,7 @@ Clone https://github.com/quic/ai-hub-models on PC and export the pre-compiled mo
 
 
 ```powershell
-PowerShell  
-cmd
+# PowerShell  cmd
 D:\py\venv\Scripts\Activate.ps1
 python -m qai_hub_models.models.stable_diffusion_v2_1.export --target-runtime precompiled_qnn_onnx  --device "QCS9075" --fetch-static-assets v0.39.1
 ```
@@ -34,8 +33,6 @@ If the version in tool-versions.yaml is qairt: 2.38.0.250901140452_125126-auto, 
 Version information can also be found in the model file under Linux using the strings command:
 
 ```bash
-Shell  
-cmd
 strings Stable-Diffusion-v2.1_text_encoder_w8a16.bin | grep "v2."
 ```
 
@@ -183,7 +180,6 @@ ldconfig
 Install pip3 on the device
 
 ```bash
-# Shell cmd
 wget https://bootstrap.pypa.io/get-pip.py
 python3 get-pip.py
 #check pip3

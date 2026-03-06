@@ -50,8 +50,6 @@ Additionally, we can also build/convert the model context files by ourselves fol
 Three model context files will be downloaded: text-encoder, unet and vae :
 
 ```text
-Shell  
-cmd
 Stable-Diffusion-v2.1_text_encoder_w8a16.bin
 Stable-Diffusion-v2.1_unet_w8a16.bin
 Stable-Diffusion-v2.1_vae_w8a16.bin
@@ -178,7 +176,6 @@ Link a lib64 directory on the device
 
 
 ```bash
-# Shell cmd
 ln -s /usr/lib /usr/lib64
 ldconfig
 ```
@@ -196,7 +193,7 @@ pip3 --version
 Create a virtual environment(venv) and activate it:
 
 ```text  
-cmdpython3 -m venv sd21-project-env
+python3 -m venv sd21-project-env
 source sd21-project-env/bin/activate
 ```
 

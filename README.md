@@ -157,8 +157,7 @@ Since only a minimal python3 is integrated in our system([Qualcomm Linux](https:
 Download python3.12.9 and python3.12.9-lib rpm package and extract files from them on a Linux host:
 
 ```bash
-Shell  
-cmd on host
+# Shell cmd on host
 wget https://yum.oracle.com/repo/OracleLinux/OL9/appstream/aarch64/getPackage/python3.12-3.12.9-1.el9.aarch64.rpm
 wget https://yum.oracle.com/repo/OracleLinux/OL9/appstream/aarch64/getPackage/python3.12-libs-3.12.9-1.el9.aarch64.rpm
 #extract files
@@ -179,8 +178,7 @@ Link a lib64 directory on the device
 
 
 ```bash
-Shell  
-cmd
+# Shell cmd
 ln -s /usr/lib /usr/lib64
 ldconfig
 ```
@@ -188,8 +186,7 @@ ldconfig
 Install pip3 on the device
 
 ```bash
-Shell  
-cmd
+# Shell cmd
 wget https://bootstrap.pypa.io/get-pip.py
 python3 get-pip.py
 #check pip3
@@ -198,8 +195,7 @@ pip3 --version
 
 Create a virtual environment(venv) and activate it:
 
-```text
-Plain Text  
+```text  
 cmdpython3 -m venv sd21-project-env
 source sd21-project-env/bin/activate
 ```
@@ -208,8 +204,7 @@ Install python modules by the runner script in the venv
 
 
 ```bash
-Shell  
-cmd
+# Shell cmd
 pip install diffusers==0.35.2 \
             numpy==2.3.5 \
             pillow==12.0.0 \
@@ -227,8 +222,6 @@ Clone or copy this project on the device
 
 
 ```bash
-Bash  
-cmd
 #In China mainland, use a huggingface mirror site instead
 export HF_ENDPOINT=https://hf-mirror.com
 export HF_HUB_ENABLE_HF_TRANSFER=1  #Optional, may speed up the download in first execution
@@ -239,7 +232,7 @@ python3 sd21_qnn_linux.py --prompt "A kitten is practicing martial arts" --steps
 
 The first execution will take a long time to download some resources from huggingface or the mirror site.
 
-The above steps were executed and verified on [Qualcomm Linux](https://docs.qualcomm.com/doc/RNO-250630224842/topic/ReleaseNote.html?product=895724676033554725&version=1.5). We also tried on LU, but failed due to the integrity of the OS and the support level of the SDK
+The above steps were executed and verified on [Qualcomm Linux](https://docs.qualcomm.com/doc/RNO-250630224842/topic/ReleaseNote.html?product=895724676033554725&version=1.5).
 
 
 You will generate below picture by

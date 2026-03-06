@@ -152,7 +152,7 @@ Select the right version of QNN SDK as above, and install it from https://qpm.qu
 
 If your device has pip3, please ignore this section.
 
-Since only a minimal python3 is integrated in our LE (Open Embedded) system, we have to install a full-fledged Python build, and pip3 is required as well.
+Since only a minimal python3 is integrated in our system([Qualcomm Linux](https://docs.qualcomm.com/doc/RNO-250630224842/topic/ReleaseNote.html?product=895724676033554725&version=1.5)), we have to install a full-fledged Python build, and pip3 is required as well.
 
 Download python3.12.9 and python3.12.9-lib rpm package and extract files from them on a Linux host:
 
@@ -239,7 +239,7 @@ python3 sd21_qnn_linux.py --prompt "A kitten is practicing martial arts" --steps
 
 The first execution will take a long time to download some resources from huggingface or the mirror site.
 
-The above steps were executed and verified on LE. We also tried on LU, but failed due to the integrity of the OS and the support level of the SDK
+The above steps were executed and verified on [Qualcomm Linux](https://docs.qualcomm.com/doc/RNO-250630224842/topic/ReleaseNote.html?product=895724676033554725&version=1.5). We also tried on LU, but failed due to the integrity of the OS and the support level of the SDK
 
 
 You will generate below picture by
